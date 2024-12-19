@@ -53,4 +53,5 @@ li {
 
 .done {
     text-decoration: line-through;
+    color: rgb(105, 105, 105);
 }
