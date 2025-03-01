@@ -75,6 +75,12 @@ button:hover:enabled {
     color: rgb(105, 105, 105);
 }
 
+#errorMessage {
+    grid-column: 1 / 3;
+    color: rgb(141, 10, 10);
+    text-align: center;
+}
+
 #clearButton {
     grid-column: 1 / 3;
     justify-self: right;
@@ -88,10 +94,44 @@ ul {
 
 li {
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 2rem;
 }
-
 
 .done {
     text-decoration: line-through;
     color: rgb(105, 105, 105);
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    color: rgb(0, 56, 0);
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 0.15rem solid rgb(0, 56, 0);
+    border-radius: 0.15rem;
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]:hover {
+    outline: 2px solid green;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.9rem;
+    height: 0.8rem;
+    clip-path: polygon(28% 28%, 49% 65%, 84% 9%, 98% 20%, 49% 95%, 28% 64%, 13% 40%);
+    transform: scale(0);
+    background-color: green;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
 }
